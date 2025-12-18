@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Arctic Orbit Tech</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <img src="img/logo.png" alt="Arctic Orbit Tech" class="site-logo">
+      <div class="brand">
+        <h1>Arctic Orbit Tech</h1>
+        <div class="logo-sub">Solusi Jaringan &amp; IT</div>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Buka menu">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container app">
+    <section id="home" class="hero-bar">
+      <div class="hero-grid">
+        <div>
+          <h2>Website Resmi Arctic Orbit Tech</h2>
+          <p>Solusi jaringan, administrasi server, instalasi CCTV, maintenance, dan layanan web profesional.</p>
+          <p class="cta-row"><a class="btn view" href="#contact">Hubungi Kami</a> <a class="btn secondary" href="#services">Lihat Layanan</a></p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="https://plus.unsplash.com/premium_photo-1661765192121-f398fd1e8fa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TmV0d29yayUyMHNlcnZpY2V8ZW58MHx8MHx8fDA%3D" alt="Ilustrasi layanan jaringan" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h3 class="section-title">About Arctic Orbit Tech</h3>
+      <div class="about-grid">
+        <div>
+          <p><strong>Arctic Orbit Tech (A.O.T)</strong> adalah penyedia layanan teknologi yang bergerak di bidang teknik komputer dan jaringan. Nama kami mencerminkan filosofi "Arctic" (stabilitas & ketahanan) dan "Orbit" (konektivitas tanpa henti). Kami berfokus pada solusi berbasis open source (Linux) yang hemat biaya namun berkinerja tinggi.</p>
+          <ul>
+            <li>Instalasi Jaringan & WiFi</li>
+            <li>Administrasi Server Linux</li>
+            <li>Maintenance & Service Komputer</li>
+            <li>Pemasangan CCTV & Sistem Keamanan</li>
+            <li>Pembuatan Website & Desain Digital</li>
+          </ul>
+        </div>
+        <div class="about-visual">
+          <img src="img/tech.png" alt="Tim Arctic Orbit Tech" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <input id="search" type="search" placeholder="Cari produk" />
+      <select id="category">
+        <option value="all">Semua Kategori</option>
+      </select>
+      <select id="sort">
+        <option value="default">Urutkan: Rekomendasi</option>
+        <option value="price-asc">Harga: Terendah</option>
+        <option value="price-desc">Harga: Tertinggi</option>
+        <option value="title-asc">Nama: A → Z</option>
+      </select>
+    </section>
+
+    <section id="services" class="services">
+      <h3 class="section-title">Layanan Kami</h3>
+      <div id="catalog" class="catalog" aria-live="polite"></div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h3 class="section-title">Kontak</h3>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h4>Hubungi Kami</h4>
+          <p>Alamat: Ruko Sentra Tekno, Blok A No. 15, Jl. Inovasi Digital Raya No. 88, Kota TeknoKarta 50987</p>
+          <p>Telepon: <a href="tel:+628952675023">+62 812-3456-7890</a></p>
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps?q=Ruko%20Sentra%20Tekno%20Blok%20A%20No.%2015%20Jl.%20Inovasi%20Digital%20Raya%20No.%2088%20Kota%20TeknoKarta%2050987&output=embed"
+              width="100%" height="220" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form" aria-label="Contact form">
+          <p class="muted">Isi formulir di bawah atau hubungi kami langsung via telepon.</p>
+          <label for="name">Nama</label>
+          <input id="name" name="name" placeholder="Nama lengkap" required>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="nama@domain.com" required>
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tulis pesan atau permintaan Anda" required></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn view">Kirim Pesan</button>
+            <button type="reset" class="btn secondary">Reset</button>
+          </div>
+          <p id="contact-status" class="muted" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button id="modal-close" class="modal-close" aria-label="Tutup">✕</button>
+      <div class="modal-left">
+        <img id="modal-image" src="" alt="" />
+      </div>
+      <div class="modal-right">
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc"></p>
+        <p class="price" id="modal-price"></p>
+        <div class="modal-actions">
+          <button id="modal-buy" class="btn view">Beli</button>
+          <button id="modal-contact" class="btn secondary">Hubungi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="logo" style="height:40px;vertical-align:middle"> 
+        <div style="display:inline-block;margin-left:10px">ARCTIC ORBIT TECH<br><small class="muted">Arctic Stability, Global Connectivity</small></div>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a> · <a href="#services">Services</a> · <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-contact muted">
+        <div>Ruko Sentra Tekno, Blok A No.15</div>
+        <div>Tel: <a href="tel:+628952675023">+62 812-3456-7890</a></div>
+      </div>
+    </div>
+    <div class="container" style="margin-top:10px;font-size:0.85rem;color:rgba(6,35,45,0.45)">© 2025 Arctic Orbit Tech — All rights reserved.</div>
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
