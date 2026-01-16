@@ -1,1 +1,2 @@
 # ArcticOrbitTech
+Cuma tugas sekolah
